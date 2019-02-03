@@ -37,12 +37,18 @@
 # Keep repeating steps 1-3 until the whole list is covered.
 
 def bubble_sort(a):
+  #Setting the range for comparison (first round: n, second round: n-1  and so on)
   for i in range(len(a)-1,0,-1):
+    #Comparing within set range
     for j in range(i):
+      #Comparing element with its right side neighbor
       if a[j] > a[j+1]:
+        # Swapping
         temp = a[j]
         a[j]=a[j+1]
         a[j+1]=temp
    return a
    
 bubble_sort([6,8,1,3,0,5])
+
+# O(n^2)
